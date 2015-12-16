@@ -3,8 +3,8 @@
 
 char	*ft_strdup(const char *src)
 {
-	int     index;
-	char    *dest;
+	size_t	index;
+	char	*dest;
 
 	index = 0;
 	dest = (char*)malloc(sizeof(*dest) * (ft_strlen(src) + 1));
