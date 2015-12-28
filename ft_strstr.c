@@ -7,9 +7,11 @@ char    *ft_strstr(const char *str, const char *to_find)
     i = 0;
     if (to_find[0] == '\0')
         return ((char*)str);
-    while (str[i] != '\0' && str[i] != to_find[0])
+    while (str[i] != '\0')
+    {
+        if (ft_strncmp((char *)(str + i), to_find, ft_strlen(to_find)) == 0)
+            return ((char *)(str + i));
         i++;
-    if (ft_strcmp((char *)(str + i), to_find) == 0)
-        return ((char *)(str + i));
+    }
     return (NULL);
 }
