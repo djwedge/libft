@@ -6,7 +6,7 @@
 /*   By: dbummer <dbummer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/10 11:19:46 by dbummer           #+#    #+#             */
-/*   Updated: 2016/01/10 11:19:50 by dbummer          ###   ########.fr       */
+/*   Updated: 2016/01/16 10:56:46 by dbummer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ int		ft_atoi(char *str)
 	result = 0;
 	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
 	{
-		result = (result + str[i] - '0') * 10;
+		result = result * 10 + (str[i] - '0');
 		i++;
 	}
-	return (result * sign / 10);
+	return (result * sign);
 }

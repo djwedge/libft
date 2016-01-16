@@ -6,17 +6,17 @@
 /*   By: dbummer <dbummer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/10 11:10:35 by dbummer           #+#    #+#             */
-/*   Updated: 2016/01/10 11:10:35 by dbummer          ###   ########.fr       */
+/*   Updated: 2016/01/16 08:50:48 by dbummer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_strclr(char *s)
+void	ft_strclr(char *s)
 {
-    while (*s)
-    {
-        *s = '\0';
-        s++;
-    }
+	while (*s)
+	{
+		*s = '\0';
+		s++;
+	}
 }

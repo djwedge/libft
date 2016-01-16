@@ -6,14 +6,14 @@
 /*   By: dbummer <dbummer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/10 11:10:31 by dbummer           #+#    #+#             */
-/*   Updated: 2016/01/10 11:10:32 by dbummer          ###   ########.fr       */
+/*   Updated: 2016/01/16 08:37:26 by dbummer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_memdel(void **ap)
+void	ft_memdel(void **ap)
 {
-    free(*ap);
-    *ap = NULL;
+	free(*ap);
+	*ap = NULL;
 }

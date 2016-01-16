@@ -6,12 +6,11 @@
 /*   By: dbummer <dbummer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/10 11:10:36 by dbummer           #+#    #+#             */
-/*   Updated: 2016/01/10 11:10:36 by dbummer          ###   ########.fr       */
+/*   Updated: 2016/01/16 08:55:46 by dbummer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *src)
 {

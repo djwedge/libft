@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: dbummer <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2016/01/16 08:57:35 by dbummer           #+#    #+#              #
+#    Updated: 2016/01/16 15:27:39 by dbummer          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 HEADER = libft.h
@@ -63,7 +75,10 @@ SRC = ft_memset.c \
         ft_lstdel.c \
         ft_lstadd.c \
         ft_lstiter.c \
-        ft_lstmap.c
+        ft_lstmap.c \
+		ft_puterr.c \
+		ft_putnbr_base.c \
+		ft_print_bits.c
 
 OBJ = $(SRC:.c=.o)
 

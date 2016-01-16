@@ -6,30 +6,32 @@
 /*   By: dbummer <dbummer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/10 11:10:42 by dbummer           #+#    #+#             */
-/*   Updated: 2016/01/10 11:10:42 by dbummer          ###   ########.fr       */
+/*   Updated: 2016/01/16 09:39:44 by dbummer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t   is_space(char c)
+static size_t	is_space(char c)
 {
-    return (c == '\n' || c == ' ' || c == '\t');
+	return (c == '\n' || c == ' ' || c == '\t');
 }
 
-static size_t   find_start(char const *s)
+static size_t	find_start(char const *s)
 {
-    size_t i;
-    
-    i = 0;
-    while (is_space(s[i]))
-        i++;
-    return (i);
+	size_t i;
+
+	i = 0;
+	while (is_space(s[i]))
+		i++;
+	return (i);
 }
 
 static size_t	find_end(char const *s)
 {
-    size_t len = ft_strlen(s);
+	size_t len;
+
+	len = ft_strlen(s);
 	if (len)
 	{
 		len--;
@@ -39,18 +41,18 @@ static size_t	find_end(char const *s)
 	return (len);
 }
 
-char            *ft_strtrim(char const *s)
+char			*ft_strtrim(char const *s)
 {
-    size_t  start;
-    size_t  end;
-    
-    start = find_start(s);
-    end = find_end(s);
-    if (!end && !start)
-        return (ft_strdup(s));
-    if (start == ft_strlen(s))
-        return (ft_strsub(s, 0, 0));
-    else
-        return (ft_strsub(s, start, end - start + 1));
-    return (NULL);
+	size_t	start;
+	size_t	end;
+
+	start = find_start(s);
+	end = find_end(s);
+	if (!end && !start)
+		return (ft_strdup(s));
+	if (start == ft_strlen(s))
+		return (ft_strsub(s, 0, 0));
+	else
+		return (ft_strsub(s, start, end - start + 1));
+	return (NULL);
 }

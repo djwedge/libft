@@ -6,18 +6,17 @@
 /*   By: dbummer <dbummer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/10 11:10:31 by dbummer           #+#    #+#             */
-/*   Updated: 2016/01/10 11:10:31 by dbummer          ###   ########.fr       */
+/*   Updated: 2016/01/16 08:33:15 by dbummer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
 	unsigned char	c2;
-	size_t          i;
+	size_t			i;
 
 	i = 0;
 	c2 = (unsigned char)c;

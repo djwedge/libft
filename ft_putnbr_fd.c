@@ -6,7 +6,7 @@
 /*   By: dbummer <dbummer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/10 11:10:33 by dbummer           #+#    #+#             */
-/*   Updated: 2016/01/10 11:10:34 by dbummer          ###   ########.fr       */
+/*   Updated: 2016/01/16 11:36:48 by dbummer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,20 @@
 
 void	ft_putnbr_fd(int nbr, int fd)
 {
+	unsigned int nb;
+
 	if (nbr < 0)
 	{
 		ft_putchar_fd('-', fd);
-		nbr = -nbr;
-	}
-	if (nbr >= 10)
-	{
-		ft_putnbr_fd(nbr / 10, fd);
-		ft_putnbr_fd(nbr % 10, fd);
+		nb = -nbr;
 	}
 	else
-		ft_putchar_fd(nbr + '0', fd);
+		nb = nbr;
+	if (nb >= 10)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putnbr_fd(nb % 10, fd);
+	}
+	else
+		ft_putchar_fd(nb + '0', fd);
 }
